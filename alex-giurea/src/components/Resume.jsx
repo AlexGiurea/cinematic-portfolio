@@ -89,13 +89,23 @@ const TennisExperience = () => {
                     </div>
                 </div>
 
-                <div className="relative w-full h-48 md:h-64 mb-8 rounded-2xl overflow-hidden group-hover:shadow-[0_0_30px_rgba(123,97,255,0.15)] transition-all duration-700 ease-out transform group-hover:-translate-y-1 z-10">
-                    <img
-                        src="/images/tarratine-club.jpeg"
-                        alt="Tarratine Club of Dark Harbor"
-                        className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-graphite/80 to-transparent mix-blend-multiply opacity-50 group-hover:opacity-30 transition-opacity duration-700"></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 relative z-10">
+                    <div className="relative w-full h-48 md:h-56 rounded-2xl overflow-hidden group-hover:shadow-[0_0_30px_rgba(123,97,255,0.15)] transition-all duration-700 ease-out transform group-hover:-translate-y-1">
+                        <img
+                            src="/images/tarratine-club.jpeg"
+                            alt="Tarratine Club of Dark Harbor"
+                            className="w-full h-full object-cover object-center transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-graphite/80 to-transparent mix-blend-multiply opacity-50 group-hover:opacity-30 transition-opacity duration-700"></div>
+                    </div>
+                    <div className="relative w-full h-48 md:h-56 rounded-2xl overflow-hidden group-hover:shadow-[0_0_30px_rgba(123,97,255,0.15)] transition-all duration-700 ease-out transform group-hover:-translate-y-1 delay-75">
+                        <img
+                            src="/images/tarratine-club-2.jpg"
+                            alt="Tarratine Club of Dark Harbor Grounds"
+                            className="w-full h-full object-cover object-center transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-graphite/80 to-transparent mix-blend-multiply opacity-50 group-hover:opacity-30 transition-opacity duration-700"></div>
+                    </div>
                 </div>
 
                 <ul className="space-y-3 text-ghost/70 text-sm md:text-base leading-relaxed relative z-10">
@@ -128,7 +138,27 @@ const TennisExperience = () => {
                         Dec 2020 — Current
                     </div>
                 </div>
-                <ul className="space-y-3 text-ghost/70 text-sm md:text-base leading-relaxed">
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 relative z-10">
+                    <div className="relative w-full h-48 md:h-56 rounded-2xl overflow-hidden group-hover:shadow-[0_0_30px_rgba(123,97,255,0.15)] transition-all duration-700 ease-out transform group-hover:-translate-y-1">
+                        <img
+                            src="/images/lmu-tennis-1.jpeg"
+                            alt="LMU Men's Tennis Team Action"
+                            className="w-full h-full object-cover object-[center_30%] transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-graphite/80 to-transparent mix-blend-multiply opacity-50 group-hover:opacity-30 transition-opacity duration-700"></div>
+                    </div>
+                    <div className="relative w-full h-48 md:h-56 rounded-2xl overflow-hidden group-hover:shadow-[0_0_30px_rgba(123,97,255,0.15)] transition-all duration-700 ease-out transform group-hover:-translate-y-1 delay-75">
+                        <img
+                            src="/images/lmu-tennis-2.jpeg"
+                            alt="LMU Men's Tennis Team Celebrate"
+                            className="w-full h-full object-cover object-center transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-graphite/80 to-transparent mix-blend-multiply opacity-50 group-hover:opacity-30 transition-opacity duration-700"></div>
+                    </div>
+                </div>
+
+                <ul className="space-y-3 text-ghost/70 text-sm md:text-base leading-relaxed relative z-10">
                     <li className="pl-4 relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-plasma/50 before:rounded-full">
                         Compete at the high-stakes collegiate level while concurrently completing a rigorous Business Analytics degree.
                     </li>
@@ -142,38 +172,48 @@ const TennisExperience = () => {
             </div>
 
             {/* Experience 3 */}
-            <div className="experience-card relative bg-graphite/40 border border-white/5 rounded-[2rem] p-8 md:p-10 hover:bg-graphite transition-colors group">
+            <div className="experience-card relative bg-graphite/40 border border-white/5 rounded-[2rem] p-8 md:p-10 hover:bg-graphite transition-colors group overflow-hidden">
                 <div className="absolute top-10 left-0 -ml-1 border-l-2 border-plasma/50 h-full hidden md:block"></div>
                 <div className="accent-dot absolute top-[2.7rem] left-[-0.3rem] w-2.5 h-2.5 rounded-full bg-white/20 hidden md:block transition-colors"></div>
 
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6 relative z-10">
                     <div>
-                        <h3 className="text-xl font-bold text-white">Tennis Coach</h3>
+                        <h3 className="text-xl font-bold text-white">Academy Player</h3>
                         <p className="text-ghost/70 font-medium">Florin Mergea Tennis Academy</p>
                     </div>
                     <div className="font-mono text-xs text-plasma bg-plasma/10 px-3 py-1.5 rounded-full shrink-0">
                         May 2021 — Jul 2023
                     </div>
                 </div>
-                <ul className="space-y-3 text-ghost/70 text-sm md:text-base leading-relaxed">
+
+                <div className="relative w-full h-48 md:h-64 mb-8 rounded-2xl overflow-hidden group-hover:shadow-[0_0_30px_rgba(123,97,255,0.15)] transition-all duration-700 ease-out transform group-hover:-translate-y-1 z-10">
+                    <img
+                        src="/images/florin-mergea.jpeg"
+                        alt="Florin Mergea Tennis Academy"
+                        className="w-full h-full object-cover object-center transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-graphite/80 to-transparent mix-blend-multiply opacity-50 group-hover:opacity-30 transition-opacity duration-700"></div>
+                </div>
+
+                <ul className="space-y-3 text-ghost/70 text-sm md:text-base leading-relaxed relative z-10">
                     <li className="pl-4 relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-plasma/50 before:rounded-full">
-                        Coached professionally oriented junior players (ages 10-15) focusing heavily on technique and match play.
+                        Practiced full-time as a professionally oriented junior player, focusing heavily on modern technique and competitive match play.
                     </li>
                     <li className="pl-4 relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-plasma/50 before:rounded-full">
-                        Served as a high-level hitting partner for young professionals preparing for international tournaments.
+                        Sparred and competed alongside high-level peers and young professionals preparing for international ITF tournaments.
                     </li>
                     <li className="pl-4 relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-plasma/50 before:rounded-full">
-                        Provided one-on-one structured mentorship aimed at enhancing mental resilience and game focus under match pressure.
+                        Received structured mentorship and tactical coaching aimed at enhancing mental resilience and game focus under pressure.
                     </li>
                 </ul>
             </div>
 
             {/* Experience 4 */}
-            <div className="experience-card relative bg-graphite/40 border border-white/5 rounded-[2rem] p-8 md:p-10 hover:bg-graphite transition-colors group">
+            <div className="experience-card relative bg-graphite/40 border border-white/5 rounded-[2rem] p-8 md:p-10 hover:bg-graphite transition-colors group overflow-hidden">
                 <div className="absolute top-10 left-0 -ml-1 border-l-2 border-plasma/50 h-full hidden md:block lg:border-l-0"></div>
                 <div className="accent-dot absolute top-[2.7rem] left-[-0.3rem] w-2.5 h-2.5 rounded-full bg-white/20 hidden md:block transition-colors lg:hidden"></div>
 
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6 relative z-10">
                     <div>
                         <h3 className="text-xl font-bold text-white">Private Tennis Coach</h3>
                         <p className="text-ghost/70 font-medium">Independent, Romania</p>
@@ -182,7 +222,17 @@ const TennisExperience = () => {
                         May 2020 — Jul 2020
                     </div>
                 </div>
-                <ul className="space-y-3 text-ghost/70 text-sm md:text-base leading-relaxed">
+
+                <div className="relative w-full h-48 md:h-64 mb-8 rounded-2xl overflow-hidden group-hover:shadow-[0_0_30px_rgba(123,97,255,0.15)] transition-all duration-700 ease-out transform group-hover:-translate-y-1 z-10">
+                    <img
+                        src="/images/private-coach.jpeg"
+                        alt="Private Tennis Coach"
+                        className="w-full h-full object-cover object-[center_30%] transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-graphite/80 to-transparent mix-blend-multiply opacity-50 group-hover:opacity-30 transition-opacity duration-700"></div>
+                </div>
+
+                <ul className="space-y-3 text-ghost/70 text-sm md:text-base leading-relaxed relative z-10">
                     <li className="pl-4 relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-plasma/50 before:rounded-full">
                         Offered personalized tennis lessons for children in my hometown, emphasizing skill development and fitness.
                     </li>

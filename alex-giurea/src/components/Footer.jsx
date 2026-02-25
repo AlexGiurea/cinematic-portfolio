@@ -15,6 +15,22 @@ export default function Footer() {
                         <div className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_10px_#22c55e] animate-pulse"></div>
                         <span className="font-mono text-[10px] uppercase tracking-wider text-ghost/80">System Operational</span>
                     </div>
+                    <a
+                        href="/images/footer-feature.jpeg"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="group relative mt-3 w-full max-w-[280px] overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-1 magnetic-link"
+                        aria-label="Open footer feature image"
+                    >
+                        <img
+                            src="/images/footer-feature.jpeg"
+                            alt="Featured footer visual"
+                            className="h-40 w-full rounded-[1.3rem] object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy"
+                        />
+                        <div className="pointer-events-none absolute inset-1 rounded-[1.3rem] bg-gradient-to-t from-[#030305]/70 via-transparent to-transparent"></div>
+                        <div className="pointer-events-none absolute inset-x-6 -bottom-8 h-10 rounded-full bg-plasma/30 blur-xl transition-opacity duration-500 group-hover:opacity-80"></div>
+                    </a>
                 </div>
 
                 <div className="flex gap-12">
