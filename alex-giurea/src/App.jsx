@@ -9,6 +9,7 @@ import AiWorkflows from './components/AiWorkflows';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import Resume from './components/Resume';
+import Chatbot from './components/Chatbot';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,6 +39,7 @@ export default function App() {
                 <Resume />
             )}
             <Footer />
+            <Chatbot />
         </main>
     );
 }
