@@ -182,7 +182,7 @@ export default function TennisCareer() {
             <div className="absolute inset-0 pointer-events-none opacity-[0.05] z-50 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
 
             {/* Hero Section */}
-            <div className="relative min-h-[85dvh] w-full flex flex-col lg:flex-row items-center justify-between p-6 sm:p-8 md:p-16 lg:p-24 overflow-hidden border-b border-white/5 gap-10 sm:gap-12 lg:gap-8">
+            <div className="relative min-h-[85dvh] w-full flex flex-col lg:flex-row items-center justify-between p-6 sm:p-8 md:p-16 lg:p-24 pb-24 sm:pb-8 md:pb-16 lg:pb-24 overflow-hidden border-b border-white/5 gap-10 sm:gap-12 lg:gap-8">
 
                 <div className="relative z-10 max-w-2xl reveal-trigger pt-8 sm:pt-12 lg:pt-0">
                     <div className="flex items-center gap-3 mb-4 sm:mb-6 reveal-text">

@@ -27,7 +27,7 @@ export default function App() {
     }, []);
 
     return (
-        <main className="relative bg-deep-void min-h-screen text-ghost font-sans selection:bg-plasma/30 overflow-x-hidden">
+        <main className="relative bg-deep-void min-h-screen text-ghost font-sans selection:bg-plasma/30 overflow-x-hidden main-chat-padding">
             <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
             {currentPage === 'home' ? (
                 <>

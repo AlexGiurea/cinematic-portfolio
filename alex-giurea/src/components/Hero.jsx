@@ -136,7 +136,7 @@ export default function Hero({ setCurrentPage, setResumeTab }) {
     }, []);
 
     return (
-        <section ref={containerRef} className="relative w-full min-h-[100dvh] pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 md:px-16 flex flex-col justify-center overflow-x-hidden">
+        <section ref={containerRef} className="relative w-full min-h-[100dvh] pt-24 sm:pt-28 md:pt-32 pb-28 sm:pb-24 md:pb-24 px-4 sm:px-6 md:px-16 flex flex-col justify-center overflow-x-hidden">
 
             <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center gap-10 sm:gap-16 lg:gap-8 relative z-10 text-center lg:text-left">
 
