@@ -86,6 +86,15 @@ function useChatSessions() {
 export default function Chatbot() {
     const [isOpen, setIsOpen] = useState(false);
     const [view, setView] = useState('chat'); // 'chat' or 'history'
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const mq = window.matchMedia('(max-width: 767px)');
+        setIsMobile(mq.matches);
+        const handler = () => setIsMobile(mq.matches);
+        mq.addEventListener('change', handler);
+        return () => mq.removeEventListener('change', handler);
+    }, []);
     const {
         sessions,
         currentSession,
@@ -197,20 +206,27 @@ export default function Chatbot() {
     };
 
     return (
-        <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+        <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end pb-[env(safe-area-inset-bottom)] sm:pb-0">
             <div
-                className={`mb-4 flex flex-col bg-deep-void/95 backdrop-blur-3xl border border-graphite rounded-[2.5rem] shadow-2xl transition-all duration-500 cubic-bezier(0.4, 0, 0.2, 1) transform origin-bottom-right relative overflow-hidden ${isOpen ? 'opacity-100 scale-100 pointer-events-auto translate-y-0' : 'opacity-0 scale-90 pointer-events-none translate-y-10'}`}
-                style={{ width: isOpen ? dimensions.width : 0, height: isOpen ? dimensions.height : 0 }}
+                className={`flex flex-col bg-deep-void/95 backdrop-blur-3xl border border-graphite shadow-2xl transition-all duration-500 cubic-bezier(0.4, 0, 0.2, 1) relative overflow-hidden ${isOpen ? 'opacity-100 scale-100 pointer-events-auto translate-y-0' : 'opacity-0 scale-90 pointer-events-none translate-y-10'} ${isMobile && isOpen ? 'fixed inset-0 z-[60] w-full h-full rounded-none border-0 pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]' : 'mb-4 rounded-[1.5rem] md:rounded-[2.5rem] border'}`}
+                style={{
+                    width: isOpen ? (isMobile ? undefined : dimensions.width) : 0,
+                    height: isOpen ? (isMobile ? undefined : dimensions.height) : 0,
+                }}
             >
                 {/* Global Noise Overlay */}
                 <div className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
 
-                {/* Resize Handles */}
-                <div className="absolute top-0 left-0 w-full h-2 cursor-ns-resize z-20" onMouseDown={startResize} />
-                <div className="absolute top-0 left-0 w-2 h-full cursor-ew-resize z-20" onMouseDown={startResize} />
+                {/* Resize Handles (desktop only) */}
+                {!isMobile && (
+                    <>
+                        <div className="absolute top-0 left-0 w-full h-2 cursor-ns-resize z-20" onMouseDown={startResize} />
+                        <div className="absolute top-0 left-0 w-2 h-full cursor-ew-resize z-20" onMouseDown={startResize} />
+                    </>
+                )}
 
                 {/* Header */}
-                <div className="flex items-center justify-between p-6 bg-graphite/20 border-b border-white/5 relative z-10">
+                <div className="flex items-center justify-between p-4 sm:p-6 bg-graphite/20 border-b border-white/5 relative z-10">
                     <div className="flex items-center gap-4">
                         {view === 'history' ? (
                             <button
@@ -258,7 +274,7 @@ export default function Chatbot() {
                     {view === 'chat' ? (
                         <>
                             {/* Messages */}
-                            <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-6 scroll-smooth scrollbar-none">
+                            <div className="flex-1 overflow-y-auto p-4 sm:p-6 flex flex-col gap-6 scroll-smooth scrollbar-none">
                                 {currentSession?.messages.map((msg, idx) => (
                                     <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} animate-in fade-in slide-in-from-bottom-2 duration-300`}>
                                         <div className={`group relative max-w-[85%] rounded-[1.5rem] px-5 py-3 text-[14px] leading-relaxed font-sans shadow-lg ${msg.role === 'user'
@@ -289,14 +305,14 @@ export default function Chatbot() {
                             </div>
 
                             {/* Input Area */}
-                            <div className="p-6 bg-gradient-to-t from-deep-void to-transparent">
+                            <div className="p-4 sm:p-6 bg-gradient-to-t from-deep-void to-transparent">
                                 <form onSubmit={handleSend} className="relative flex items-center gap-3">
                                     <input
                                         type="text"
                                         value={input}
                                         onChange={(e) => setInput(e.target.value)}
                                         placeholder="Command sequence..."
-                                        className="flex-1 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-sm font-sans text-ghost placeholder:text-ghost/20 focus:outline-none focus:border-plasma/50 focus:bg-white/10 transition-all shadow-inner"
+                                        className="flex-1 min-w-0 bg-white/5 border border-white/10 rounded-2xl px-4 sm:px-6 py-3 sm:py-4 text-sm font-sans text-ghost placeholder:text-ghost/20 focus:outline-none focus:border-plasma/50 focus:bg-white/10 transition-all shadow-inner"
                                     />
                                     <button
                                         type="submit"
@@ -313,7 +329,7 @@ export default function Chatbot() {
                         </>
                     ) : (
                         /* History View */
-                        <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-3 scrollbar-none">
+                        <div className="flex-1 overflow-y-auto p-4 sm:p-6 flex flex-col gap-3 scrollbar-none">
                             <button
                                 onClick={() => {
                                     createNewSession();
@@ -345,7 +361,7 @@ export default function Chatbot() {
                                         </div>
                                         <button
                                             onClick={(e) => deleteSession(e, s.id)}
-                                            className="opacity-0 group-hover:opacity-100 p-2 text-ghost/30 hover:text-red-400 transition-all"
+                                            className="opacity-100 md:opacity-0 md:group-hover:opacity-100 p-2 text-ghost/30 hover:text-red-400 transition-all touch-manipulation"
                                         >
                                             <Trash2 className="w-4 h-4" />
                                         </button>
@@ -360,7 +376,7 @@ export default function Chatbot() {
             {/* Toggle Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`w-16 h-16 bg-plasma text-ghost flex items-center justify-center rounded-[1.8rem] shadow-2xl hover:shadow-plasma/40 hover:scale-105 active:scale-95 transition-all duration-500 transform group relative ${isOpen ? 'rotate-90' : 'rotate-0'}`}
+                className={`w-14 h-14 sm:w-16 sm:h-16 bg-plasma text-ghost flex items-center justify-center rounded-[1.4rem] sm:rounded-[1.8rem] shadow-2xl hover:shadow-plasma/40 hover:scale-105 active:scale-95 transition-all duration-500 transform group relative ${isOpen ? 'rotate-90' : 'rotate-0'}`}
             >
                 <div className="absolute inset-0 bg-plasma rounded-[1.8rem] blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
                 {isOpen ? (

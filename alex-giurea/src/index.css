@@ -8,11 +8,17 @@
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #0A0A14;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 ::-webkit-scrollbar {
@@ -75,4 +81,22 @@ body {
   .perspective-1000 {
     perspective: 1000px;
   }
+}
+
+/* Navbar: respect safe area on notched devices */
+.nav-safe-top {
+  top: max(1rem, env(safe-area-inset-top));
+}
+@media (min-width: 768px) {
+  .nav-safe-top { top: 1.5rem; }
+}
+
+/* AiWorkflows: mobile stacked cards, desktop overlapping for pin animation */
+.protocol-card.panel-0 { top: 0; }
+.protocol-card.panel-1 { top: 100dvh; }
+.protocol-card.panel-2 { top: 200dvh; }
+@media (min-width: 768px) {
+  .protocol-card.panel-0,
+  .protocol-card.panel-1,
+  .protocol-card.panel-2 { top: 0; }
 }

@@ -304,14 +304,14 @@ export default function Resume({ initialTab, setResumeTab }) {
     }, [viewMode]);
 
     return (
-        <section ref={containerRef} className="min-h-screen pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 text-ghost">
+        <section ref={containerRef} className="min-h-screen pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 sm:gap-16 text-ghost">
 
             {/* Left Sidebar (Sticky on Desktop) */}
-            <div className="w-full lg:w-1/3 flex flex-col gap-10 lg:sticky lg:top-32 self-start" ref={leftColRef}>
+            <div className="w-full lg:w-1/3 flex flex-col gap-6 sm:gap-10 lg:sticky lg:top-32 self-start" ref={leftColRef}>
 
                 {/* Header & Title */}
                 <div className="flex flex-col gap-2">
-                    <h1 className="text-4xl md:text-5xl font-sans font-bold tracking-tight text-white m-0">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold tracking-tight text-white m-0">
                         Alex Giurea
                     </h1>
                     <p className="text-plasma font-mono text-sm leading-relaxed mt-2">
@@ -324,8 +324,8 @@ export default function Resume({ initialTab, setResumeTab }) {
                 <div className="flex flex-col gap-4 border-t border-white/10 pt-8">
                     <h3 className="font-mono text-xs tracking-widest text-ghost/50 uppercase mb-2">Connect</h3>
 
-                    <a href="mailto:alex.rares.giurea@gmail.com" className="flex items-center gap-3 group text-sm font-medium hover:text-white transition-colors">
-                        <Mail size={16} className="text-plasma/70 group-hover:text-plasma transition-colors" />
+                    <a href="mailto:alex.rares.giurea@gmail.com" className="flex items-center gap-3 group text-sm font-medium hover:text-white transition-colors break-all">
+                        <Mail size={16} className="text-plasma/70 group-hover:text-plasma transition-colors shrink-0" />
                         alex.rares.giurea@gmail.com
                     </a>
 
@@ -393,16 +393,16 @@ export default function Resume({ initialTab, setResumeTab }) {
             <div className="w-full lg:w-2/3 flex flex-col gap-8">
 
                 {/* Dual Toggle Switch */}
-                <div className="flex items-center bg-white/5 border border-white/10 rounded-full p-1.5 self-start mb-4">
+                <div className="flex items-center bg-white/5 border border-white/10 rounded-full p-1.5 self-stretch sm:self-start mb-4">
                     <button
                         onClick={() => setViewMode('software')}
-                        className={`px-6 py-2.5 rounded-full font-mono text-sm uppercase tracking-widest transition-all duration-300 ${viewMode === 'software' ? 'bg-plasma text-white shadow-[0_0_20px_rgba(123,97,255,0.4)]' : 'text-ghost/50 hover:text-white'}`}
+                        className={`flex-1 sm:flex-initial px-4 sm:px-6 py-2.5 rounded-full font-mono text-xs sm:text-sm uppercase tracking-widest transition-all duration-300 ${viewMode === 'software' ? 'bg-plasma text-white shadow-[0_0_20px_rgba(123,97,255,0.4)]' : 'text-ghost/50 hover:text-white'}`}
                     >
                         Software
                     </button>
                     <button
                         onClick={() => setViewMode('tennis')}
-                        className={`px-6 py-2.5 rounded-full font-mono text-sm uppercase tracking-widest transition-all duration-300 ${viewMode === 'tennis' ? 'bg-plasma text-white shadow-[0_0_20px_rgba(123,97,255,0.4)]' : 'text-ghost/50 hover:text-white'}`}
+                        className={`flex-1 sm:flex-initial px-4 sm:px-6 py-2.5 rounded-full font-mono text-xs sm:text-sm uppercase tracking-widest transition-all duration-300 ${viewMode === 'tennis' ? 'bg-plasma text-white shadow-[0_0_20px_rgba(123,97,255,0.4)]' : 'text-ghost/50 hover:text-white'}`}
                     >
                         Tennis
                     </button>

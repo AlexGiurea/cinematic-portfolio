@@ -9,6 +9,8 @@ const TiltCard = ({ src, alt, className }) => {
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
+            if (!window.matchMedia('(hover: hover)').matches) return;
+
             const wrapper = wrapperRef.current;
             const card = cardRef.current;
             const img = imgRef.current;
@@ -134,9 +136,9 @@ export default function Hero({ setCurrentPage, setResumeTab }) {
     }, []);
 
     return (
-        <section ref={containerRef} className="relative w-full min-h-[100dvh] pt-32 pb-24 px-6 md:px-16 flex flex-col justify-center">
+        <section ref={containerRef} className="relative w-full min-h-[100dvh] pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 md:px-16 flex flex-col justify-center overflow-x-hidden">
 
-            <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center gap-16 lg:gap-8 relative z-10 text-center lg:text-left">
+            <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center gap-10 sm:gap-16 lg:gap-8 relative z-10 text-center lg:text-left">
 
                 {/* Text Column */}
                 <div className="flex-1 w-full max-w-2xl flex flex-col gap-6 items-center lg:items-start select-text">
@@ -144,27 +146,27 @@ export default function Hero({ setCurrentPage, setResumeTab }) {
                         <span className="w-8 h-[1px] bg-plasma hidden lg:block"></span> Welcome
                     </div>
 
-                    <h1 className="hero-el text-4xl md:text-6xl lg:text-7xl font-sans font-bold text-ghost tracking-tighter leading-tight">
+                    <h1 className="hero-el text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-sans font-bold text-ghost tracking-tighter leading-tight">
                         Hey, I'm <br className="hidden lg:block" />
                         <span className="text-plasma italic font-serif pr-2">Alex Giurea.</span>
                     </h1>
 
-                    <p className="hero-el text-lg md:text-xl text-ghost/80 font-sans leading-relaxed">
+                    <p className="hero-el text-base sm:text-lg md:text-xl text-ghost/80 font-sans leading-relaxed">
                         I'm a senior studying Business Analytics and competing on the men's tennis team at LMU. I love coaching players on the court, and building powerful products off the court.
                     </p>
 
-                    <p className="hero-el text-base md:text-lg text-ghost/60 font-sans leading-relaxed">
+                    <p className="hero-el text-sm sm:text-base md:text-lg text-ghost/60 font-sans leading-relaxed">
                         I build web apps, modern SaaS platforms, and AI automations that actually save people time. I care about making tools that aren't just useful, but feel incredibly smooth to use.
                     </p>
 
-                    <div className="hero-el mt-6 w-full flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <div className="hero-el mt-4 sm:mt-6 w-full flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
                         <button
                             onClick={() => {
                                 window.scrollTo(0, 0);
                                 setResumeTab('tennis');
                                 setCurrentPage('resume');
                             }}
-                            className="magnetic-btn bg-plasma text-white px-8 py-4 rounded-full text-base font-semibold shadow-[0_0_30px_rgba(123,97,255,0.3)] hover:shadow-[0_0_50px_rgba(123,97,255,0.6)] transition-all whitespace-nowrap text-center"
+                            className="magnetic-btn bg-plasma text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold shadow-[0_0_30px_rgba(123,97,255,0.3)] hover:shadow-[0_0_50px_rgba(123,97,255,0.6)] transition-all whitespace-nowrap text-center"
                         >
                             View Resume
                         </button>
@@ -174,7 +176,7 @@ export default function Hero({ setCurrentPage, setResumeTab }) {
                                 setResumeTab('software');
                                 setCurrentPage('resume');
                             }}
-                            className="magnetic-link text-center border border-white/20 bg-white/5 backdrop-blur-sm text-white px-8 py-4 rounded-full text-base font-semibold hover:border-plasma hover:text-plasma hover:bg-white/10 transition-all whitespace-nowrap"
+                            className="magnetic-link text-center border border-white/20 bg-white/5 backdrop-blur-sm text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:border-plasma hover:text-plasma hover:bg-white/10 transition-all whitespace-nowrap"
                         >
                             See What I Build
                         </button>
@@ -182,36 +184,36 @@ export default function Hero({ setCurrentPage, setResumeTab }) {
                 </div>
 
                 {/* 3D Collage Column */}
-                <div className="flex-1 w-full relative h-[500px] md:h-[600px] flex items-center justify-center mt-12 lg:mt-0">
+                <div className="flex-1 w-full relative h-[320px] sm:h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center mt-8 sm:mt-12 lg:mt-0 min-w-0">
 
                     <TiltCard
                         src="/images/hero-5.jpeg"
                         alt="Alex competing"
-                        className="hero-card w-[240px] h-[340px] md:w-[300px] md:h-[420px] absolute z-20 shadow-2xl"
+                        className="hero-card w-[160px] h-[230px] sm:w-[220px] sm:h-[310px] md:w-[280px] md:h-[390px] lg:w-[300px] lg:h-[420px] absolute z-20 shadow-2xl"
                     />
 
                     <TiltCard
                         src="/images/hero-2.jpeg"
                         alt="Alex swinging racket"
-                        className="hero-card w-[160px] h-[160px] md:w-[200px] md:h-[200px] absolute z-10 top-[5%] md:top-[10%] right-[5%] md:right-[0%] rotate-[8deg]"
+                        className="hero-card w-[90px] h-[90px] sm:w-[140px] sm:h-[140px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] absolute z-10 top-[2%] sm:top-[5%] md:top-[10%] right-[2%] sm:right-[5%] md:right-[0%] rotate-[8deg]"
                     />
 
                     <TiltCard
                         src="/images/hero-3.jpeg"
                         alt="Alex casual"
-                        className="hero-card w-[150px] h-[200px] md:w-[180px] md:h-[240px] absolute z-30 bottom-[5%] md:bottom-[10%] left-[5%] md:left-[5%] -rotate-[6deg]"
+                        className="hero-card w-[85px] h-[115px] sm:w-[130px] sm:h-[170px] md:w-[160px] md:h-[210px] lg:w-[180px] lg:h-[240px] absolute z-30 bottom-[5%] md:bottom-[10%] left-[2%] sm:left-[5%] md:left-[5%] -rotate-[6deg]"
                     />
 
                     <TiltCard
                         src="/images/hero-4.jpeg"
                         alt="Alex smiling with racket"
-                        className="hero-card w-[140px] h-[180px] md:w-[170px] md:h-[210px] absolute z-10 bottom-[15%] md:bottom-[20%] right-[10%] md:right-[5%] rotate-[12deg]"
+                        className="hero-card w-[80px] h-[100px] sm:w-[120px] sm:h-[155px] md:w-[150px] md:h-[185px] lg:w-[170px] lg:h-[210px] absolute z-10 bottom-[12%] md:bottom-[20%] right-[8%] md:right-[5%] rotate-[12deg]"
                     />
 
                     <TiltCard
                         src="/images/hero-1.jpeg"
                         alt="Alex action"
-                        className="hero-card w-[130px] h-[160px] md:w-[160px] md:h-[200px] absolute z-10 top-[2%] md:top-[5%] left-[10%] md:left-[5%] -rotate-[10deg]"
+                        className="hero-card w-[75px] h-[95px] sm:w-[115px] sm:h-[145px] md:w-[145px] md:h-[180px] lg:w-[160px] lg:h-[200px] absolute z-10 top-[2%] md:top-[5%] left-[5%] md:left-[5%] -rotate-[10deg]"
                     />
 
                 </div>

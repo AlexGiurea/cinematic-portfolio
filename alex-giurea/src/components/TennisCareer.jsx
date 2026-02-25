@@ -63,7 +63,7 @@ const TacticalBlueprint = ({ activePhase }) => {
         <div className="relative group perspective-1000">
             <div className="absolute inset-0 bg-plasma/5 blur-[100px] rounded-full opacity-50 group-hover:opacity-80 transition-opacity"></div>
 
-            <svg ref={svgRef} viewBox="0 0 200 400" className="w-[300px] sm:w-[350px] lg:w-[400px] h-auto drop-shadow-[0_0_25px_rgba(123,97,255,0.2)]">
+            <svg ref={svgRef} viewBox="0 0 200 400" className="w-[260px] sm:w-[350px] lg:w-[400px] max-w-[90vw] h-auto drop-shadow-[0_0_25px_rgba(123,97,255,0.2)]">
                 {/* Court Grids */}
                 <rect x="20" y="20" width="160" height="360" stroke="rgba(255,255,255,0.05)" strokeWidth="1" fill="rgba(123,97,255,0.02)" />
                 <path d="M20 200 L180 200" stroke="rgba(123,97,255,0.3)" strokeWidth="2" strokeDasharray="4 4" />
@@ -182,25 +182,25 @@ export default function TennisCareer() {
             <div className="absolute inset-0 pointer-events-none opacity-[0.05] z-50 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
 
             {/* Hero Section */}
-            <div className="relative min-h-[85dvh] w-full flex flex-col lg:flex-row items-center justify-between p-8 md:p-16 lg:p-24 overflow-hidden border-b border-white/5 gap-12 lg:gap-8">
+            <div className="relative min-h-[85dvh] w-full flex flex-col lg:flex-row items-center justify-between p-6 sm:p-8 md:p-16 lg:p-24 overflow-hidden border-b border-white/5 gap-10 sm:gap-12 lg:gap-8">
 
-                <div className="relative z-10 max-w-2xl reveal-trigger pt-12 lg:pt-0">
-                    <div className="flex items-center gap-3 mb-6 reveal-text">
-                        <span className="w-12 h-[1px] bg-plasma"></span>
-                        <span className="font-mono text-xs uppercase tracking-[0.4em] text-plasma">Performance Identity</span>
+                <div className="relative z-10 max-w-2xl reveal-trigger pt-8 sm:pt-12 lg:pt-0">
+                    <div className="flex items-center gap-3 mb-4 sm:mb-6 reveal-text">
+                        <span className="w-8 sm:w-12 h-[1px] bg-plasma"></span>
+                        <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.3em] sm:tracking-[0.4em] text-plasma">Performance Identity</span>
                     </div>
-                    <h2 className="text-6xl md:text-8xl lg:text-9xl font-sans font-black text-white tracking-tighter mb-8 reveal-text leading-[0.9]">
+                    <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-sans font-black text-white tracking-tighter mb-6 sm:mb-8 reveal-text leading-[0.9]">
                         Athletic <br />
                         <span className="italic font-drama text-plasma/90">Discipline.</span>
                     </h2>
-                    <p className="text-xl md:text-2xl text-white/60 max-w-xl font-sans font-light reveal-text leading-relaxed">
+                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/60 max-w-xl font-sans font-light reveal-text leading-relaxed">
                         Collegiate athlete mindset brought directly into software architecture.
                         Focused on extreme preparation, consistency, and resilience under technical pressure.
                     </p>
                 </div>
 
                 {/* Structured Image Container */}
-                <div ref={heroImgRef} className="relative z-0 w-full lg:w-[45%] max-w-md lg:max-w-xl aspect-[3/4] lg:aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(123,97,255,0.15)] opacity-0 translate-y-10 group">
+                <div ref={heroImgRef} className="relative z-0 w-full lg:w-[45%] max-w-sm sm:max-w-md lg:max-w-xl aspect-[3/4] lg:aspect-[4/5] rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(123,97,255,0.15)] opacity-0 translate-y-10 group">
                     <img
                         src="/images/tennis-hero.jpg"
                         alt="High performance tennis action"
@@ -211,19 +211,19 @@ export default function TennisCareer() {
             </div>
 
             {/* Technical Breakdown Section */}
-            <div className="relative z-10 py-32 px-8 md:px-16 lg:px-24 flex flex-col items-center">
-                <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
+            <div className="relative z-10 py-16 sm:py-24 md:py-32 px-4 sm:px-8 md:px-16 lg:px-24 flex flex-col items-center">
+                <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-32 items-center">
 
                     {/* Left: Tactical Blueprint */}
                     <div className="flex flex-col items-center">
                         <TacticalBlueprint activePhase={activePhase} />
 
-                        <div className="mt-12 flex gap-4">
+                        <div className="mt-8 sm:mt-12 flex flex-wrap justify-center gap-2 sm:gap-4">
                             {['d1', 'itf', 'coach'].map((phase) => (
                                 <button
                                     key={phase}
                                     onClick={() => setActivePhase(phase)}
-                                    className={`px-6 py-2 rounded-full font-mono text-[10px] uppercase tracking-widest border transition-all ${activePhase === phase
+                                    className={`px-4 sm:px-6 py-2 rounded-full font-mono text-[10px] uppercase tracking-widest border transition-all ${activePhase === phase
                                         ? 'bg-plasma text-white border-plasma shadow-[0_0_20px_rgba(123,97,255,0.4)] scale-105'
                                         : 'bg-white/5 text-white/40 border-white/10 hover:border-white/20'
                                         }`}
@@ -253,9 +253,9 @@ export default function TennisCareer() {
                                 desc: "Bridging mechanical execution with psychological confidence. Simplifying complex movements into repeatable, high-value success."
                             }
                         ].map((tier, i) => (
-                            <div key={i} className="group p-8 bg-white/5 border border-white/10 rounded-[2rem] hover:bg-white/10 transition-all flex flex-col justify-center">
+                            <div key={i} className="group p-5 sm:p-6 md:p-8 bg-white/5 border border-white/10 rounded-[1.5rem] sm:rounded-[2rem] hover:bg-white/10 transition-all flex flex-col justify-center">
                                 <span className="font-mono text-xs text-plasma mb-2 block">{tier.context}</span>
-                                <h5 className="text-xl lg:text-2xl font-sans font-bold text-white mb-2 group-hover:text-plasma transition-colors">{tier.title}</h5>
+                                <h5 className="text-lg sm:text-xl lg:text-2xl font-sans font-bold text-white mb-2 group-hover:text-plasma transition-colors">{tier.title}</h5>
                                 <p className="text-white/40 leading-relaxed text-sm">{tier.desc}</p>
                                 <div className="mt-4 pt-4 border-t border-white/5 flex items-center justify-between">
                                     <span className="font-mono text-[10px] uppercase tracking-widest text-white/20">Protocol_0{i + 1}</span>
