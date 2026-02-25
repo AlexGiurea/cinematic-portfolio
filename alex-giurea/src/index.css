@@ -67,4 +67,12 @@ body {
   .translate-z-80 {
     transform: translateZ(80px);
   }
+
+  .font-drama {
+    font-family: 'Instrument Serif', serif;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
 }

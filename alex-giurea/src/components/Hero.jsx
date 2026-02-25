@@ -108,7 +108,7 @@ const TiltCard = ({ src, alt, className }) => {
     );
 };
 
-export default function Hero() {
+export default function Hero({ setCurrentPage, setResumeTab }) {
     const containerRef = useRef(null);
 
     useLayoutEffect(() => {
@@ -157,10 +157,27 @@ export default function Hero() {
                         I build web apps, modern SaaS platforms, and AI automations that actually save people time. I care about making tools that aren't just useful, but feel incredibly smooth to use.
                     </p>
 
-                    <div className="hero-el mt-4 flex gap-4">
-                        <a href="#projects" className="magnetic-btn bg-plasma text-white px-8 py-4 rounded-full text-base font-semibold shadow-[0_0_30px_rgba(123,97,255,0.3)] hover:shadow-[0_0_50px_rgba(123,97,255,0.6)] transition-all">
+                    <div className="hero-el mt-6 w-full flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button
+                            onClick={() => {
+                                window.scrollTo(0, 0);
+                                setResumeTab('tennis');
+                                setCurrentPage('resume');
+                            }}
+                            className="magnetic-btn bg-plasma text-white px-8 py-4 rounded-full text-base font-semibold shadow-[0_0_30px_rgba(123,97,255,0.3)] hover:shadow-[0_0_50px_rgba(123,97,255,0.6)] transition-all whitespace-nowrap text-center"
+                        >
+                            View Resume
+                        </button>
+                        <button
+                            onClick={() => {
+                                window.scrollTo(0, 0);
+                                setResumeTab('software');
+                                setCurrentPage('resume');
+                            }}
+                            className="magnetic-link text-center border border-white/20 bg-white/5 backdrop-blur-sm text-white px-8 py-4 rounded-full text-base font-semibold hover:border-plasma hover:text-plasma hover:bg-white/10 transition-all whitespace-nowrap"
+                        >
                             See What I Build
-                        </a>
+                        </button>
                     </div>
                 </div>
 
