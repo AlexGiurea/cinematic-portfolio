@@ -138,7 +138,7 @@ export default function Hero({ setCurrentPage, setResumeTab }) {
     return (
         <section ref={containerRef} className="relative w-full min-h-[100dvh] pt-24 sm:pt-28 md:pt-32 pb-28 sm:pb-24 md:pb-24 px-4 sm:px-6 md:px-16 flex flex-col justify-center overflow-x-hidden">
 
-            <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center gap-10 sm:gap-16 lg:gap-8 relative z-10 text-center lg:text-left">
+            <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center gap-12 sm:gap-16 lg:gap-8 relative z-10 text-center lg:text-left">
 
                 {/* Text Column */}
                 <div className="flex-1 w-full max-w-2xl flex flex-col gap-6 items-center lg:items-start select-text">
@@ -159,7 +159,7 @@ export default function Hero({ setCurrentPage, setResumeTab }) {
                         I build web apps, modern SaaS platforms, and AI automations that actually save people time. I care about making tools that aren't just useful, but feel incredibly smooth to use.
                     </p>
 
-                    <div className="hero-el mt-4 sm:mt-6 w-full flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+                    <div className="hero-el mt-4 sm:mt-6 mb-6 sm:mb-0 w-full flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
                         <button
                             onClick={() => {
                                 window.scrollTo(0, 0);
@@ -184,7 +184,7 @@ export default function Hero({ setCurrentPage, setResumeTab }) {
                 </div>
 
                 {/* 3D Collage Column */}
-                <div className="flex-1 w-full relative h-[320px] sm:h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center mt-8 sm:mt-12 lg:mt-0 min-w-0">
+                <div className="flex-1 w-full relative h-[320px] sm:h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center mt-12 sm:mt-12 lg:mt-0 min-w-0">
 
                     <TiltCard
                         src="/images/hero-5.jpeg"
