@@ -1,0 +1,34 @@
+Sandro Structured by Life Domains
+1. Tennis Coach and College Player
+
+Sandro’s strongest and most central life domain is tennis, both as a coach and as an active college athlete. This side of his life shows leadership, discipline, competitiveness, and the ability to connect with people through sport. He is currently a student athlete on the Men’s Tennis team at Lincoln Memorial University, which means he is still living the athlete experience in real time while balancing academics, performance, and responsibility. That current involvement gives him credibility as a coach because he is not disconnected from the game. He is still competing, training, and developing as a player himself.
+
+His athletic background is even broader than college tennis. Before and alongside tennis, Sandro built an impressive racquet sports profile. He was a 2014 Racquetball World Champion and in 2016 he was ranked third in South America in squash. These achievements show that he has long been part of high level competition and has experience performing under pressure. They also help explain his strong mentality, resilience, and understanding of what it takes to improve in sport over time.
+
+As a coach, Sandro has already built meaningful experience in several environments. He has coached in camps, academies, and private club settings, which means he has worked with different age groups, skill levels, and expectations. At Camp IHC Academy in Pennsylvania, he gave private lessons to youth players ages 6 to 15, helping them with technique and strategy in a personalized way. At Camp Taconic in Massachusetts, he led group clinics and used fun, game based learning to help campers improve while enjoying the sport. These roles show that he can teach both individually and in groups, and that he knows how to make tennis both educational and engaging.
+
+His experience became even more advanced through his work at Tandil Tennis Academy in Argentina, where he served as an assistant coach. There, he worked with youth and adults in a serious training environment and was exposed to high performance coaching methods. He also worked alongside elite coaching staff, including professionals connected to Juan Martín del Potro. This gave him a strong technical and developmental base as a coach and helped him understand how serious tennis programs are run.
+
+One of the clearest signs of Sandro’s leadership in this domain is his role as Tennis Director and Pickleball Coach at Block Island Club in Rhode Island during the summer of 2025. This was not just a teaching position. It involved supervising and scheduling assistant coaches, delivering clinics and private lessons, and organizing tournaments and social events for members. That means he was trusted not only to coach, but also to lead staff, manage operations, and help create a positive club experience. This role shows that Sandro is growing from being only a coach into someone who can manage programs and lead people.
+
+Overall, the tennis domain reveals Sandro as someone who combines athlete identity and coaching ability in a very natural way. He understands competition, development, instruction, teamwork, and leadership. Because he is still a college player, he brings current energy and relevance to his coaching. Because he already has years of coaching experience, he also brings maturity and structure. Together, these make tennis not just something he does, but one of the main foundations of who he is.
+
+2. Photographer
+
+The second major life domain for Sandro is photography, especially sports photography. This area highlights a different side of him, one that is creative, observant, detail oriented, and visually expressive. While tennis and coaching show his athletic and leadership identity, photography shows his artistic and storytelling ability.
+
+Since October 2024, Sandro has worked as a Sports Photographer at Lincoln Memorial University. In this role, he captures action shots during university sports events for promotional materials and social media. This means his photography is not just casual or personal. It serves a professional purpose. His images help represent the university’s athletic programs, attract attention, and increase engagement. In that sense, photography is connected not only to creativity but also to communication and branding.
+
+His work involves more than taking photos. He also edits and enhances them, which shows skill in image editing and post production. He understands that photography is not only about capturing a moment, but also about refining that moment so it communicates energy, emotion, and quality. This makes him valuable in settings where visual content matters, especially in sports, marketing, and university promotion.
+
+Sports photography also fits Sandro especially well because of his athletic background. As an athlete himself, he likely understands movement, timing, emotion, and the key moments in competition better than someone without sports experience. This can help him anticipate strong shots and capture action in a more authentic and dynamic way. In other words, he is not just photographing sports from the outside. He understands the rhythm and intensity of sports from the inside.
+
+Photography also supports some of his other strengths. It connects with storytelling, communication, and marketing. A strong sports photograph can tell a story, build a brand, and create emotional impact. Since Sandro already has experience in marketing consulting and student facing roles, photography becomes another way he contributes to promotion and representation. It adds a creative dimension to his profile that makes him more versatile.
+
+Overall, the photography domain presents Sandro as someone who can communicate through images just as well as he can through leadership or coaching. It shows patience, visual intelligence, consistency, and a strong sense of presentation. This area complements his other experiences very well and gives him an additional professional strength beyond athletics and business.
+
+Final Integrated View
+
+When Sandro’s life is viewed through these two domains, a very clear picture appears. In the tennis domain, he is a competitor, mentor, coach, and leader. In the photography domain, he is a visual storyteller and creative contributor. Together, these two sides make him well rounded and distinctive. One side shows performance, discipline, and team leadership. The other shows creativity, branding, and attention to detail.
+
+These domains also support each other. His life as an athlete helps him understand sports photography better. His creative eye in photography can also help him present sports, players, and programs more powerfully. Both domains involve timing, awareness, passion, and a deep connection to sport. So even though they are different areas, they are closely linked in the kind of person and professional Sandro is becoming.
