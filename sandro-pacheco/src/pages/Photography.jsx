@@ -4,9 +4,9 @@ const photoImages = [
 ];
 
 const photographyNotes = [
-  'His perspective comes from knowing the game from inside, so the images feel immediate rather than distant.',
-  'The work is not only about capture. Editing and refinement are part of how the final image carries energy.',
-  'This page now has its own visual rhythm and no longer competes with the tennis page for space or meaning.',
+  'He shoots sports from the point of view of someone who understands the game.',
+  'Editing matters too, because the final image should still feel clear and alive.',
+  'This page is meant to stay simple and let the photos lead.',
 ];
 
 export default function Photography() {
@@ -15,11 +15,10 @@ export default function Photography() {
       <section className="rounded-[2.25rem] border border-white/10 bg-white/[0.05] px-6 py-12 backdrop-blur-2xl md:px-10 md:py-16 lg:px-14">
         <p className="font-sans text-[0.72rem] uppercase tracking-[0.42em] text-sand/80">Photography</p>
         <h1 className="mt-4 max-w-5xl font-serif text-5xl leading-[0.94] text-cream md:text-7xl">
-          Photography here is not an extra skill. It is another way of reading sport.
+          Photography is another way Sandro stays close to sport.
         </h1>
         <p className="mt-6 max-w-3xl text-lg leading-8 text-cream/72">
-          This page now stands on its own. The layout is quieter, more editorial, and built around the images
-          themselves rather than around cards that feel repeated from the tennis side.
+          The focus here is simple: movement, timing, and the feeling of the moment.
         </p>
       </section>
 
@@ -34,8 +33,8 @@ export default function Photography() {
           </article>
 
           <div className="rounded-[2rem] border border-white/10 bg-[#17171d] p-8 md:p-10">
-            <p className="font-sans text-[0.72rem] uppercase tracking-[0.38em] text-sand/80">Visual approach</p>
-            <h2 className="mt-4 font-serif text-4xl text-cream">Presence first, polish second.</h2>
+            <p className="font-sans text-[0.72rem] uppercase tracking-[0.38em] text-sand/80">Approach</p>
+            <h2 className="mt-4 font-serif text-4xl text-cream">Simple, focused, and close to the action.</h2>
             <div className="mt-6 grid gap-4">
               {photographyNotes.map((note) => (
                 <div key={note} className="rounded-[1.4rem] border border-white/10 bg-white/[0.06] p-5">

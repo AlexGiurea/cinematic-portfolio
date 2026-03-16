@@ -1,23 +1,15 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
-import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Home from './pages/Home';
 import About from './pages/About';
 import Tennis from './pages/Tennis';
 import Photography from './pages/Photography';
 import Contact from './pages/Contact';
 
 function App() {
-  const [homeDomain, setHomeDomain] = useState('tennis');
   const location = useLocation();
   const isHome = location.pathname === '/';
-  const activeDomain =
-    location.pathname === '/tennis'
-      ? 'tennis'
-      : location.pathname === '/photography'
-        ? 'photography'
-        : homeDomain;
+  const activeDomain = location.pathname === '/photography' ? 'photography' : 'tennis';
 
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-ink text-cream">
@@ -27,12 +19,12 @@ function App() {
       </div>
 
       <div className="relative z-10">
-        <Navbar activeDomain={activeDomain} setActiveDomain={setHomeDomain} />
+        <Navbar activeDomain={activeDomain} />
         <main className={isHome ? '' : 'px-4 pb-16 pt-8 md:px-8 md:pb-24'}>
           <Routes>
-            <Route path="/" element={<Home activeDomain={activeDomain} setActiveDomain={setHomeDomain} />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/" element={<Tennis />} />
             <Route path="/tennis" element={<Tennis />} />
+            <Route path="/about" element={<About />} />
             <Route path="/photography" element={<Photography />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

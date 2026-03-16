@@ -11,15 +11,14 @@ const playerImages = [
 ];
 
 const coachingPoints = [
-  'Private lessons that make technique feel clear, direct, and personal.',
-  'Group sessions where energy and structure can exist at the same time.',
-  'Club leadership experience shaping schedules, clinics, and the atmosphere around the courts.',
+  'Private lessons with clear feedback and a calm tone.',
+  'Group sessions that stay fun while still teaching the basics well.',
+  'Experience leading clinics, schedules, and the day-to-day feel around the courts.',
 ];
 
 const playerMoments = [
   { value: 'LMU', label: "Senior on the men's tennis team" },
-  { value: '2-0', label: 'Freshman singles record in first college season' },
-  { value: '6-0, 6-2', label: 'Dominant senior-season opening result' },
+  { value: '6-0, 6-2', label: 'Strong senior-season opening win' },
 ];
 
 export default function Tennis() {
@@ -29,11 +28,11 @@ export default function Tennis() {
         <div>
           <p className="font-sans text-[0.72rem] uppercase tracking-[0.42em] text-sand/80">Tennis</p>
           <h1 className="mt-4 font-serif text-5xl leading-[0.95] text-cream md:text-7xl">
-            One page, two sides of the same identity: coach and player.
+            Tennis is the center of Sandro&apos;s work and story.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-cream/72">
-            Sandro teaches from inside the sport. The same person guiding players through lessons is still
-            competing, still reading momentum in real time, and still building his own game.
+            He coaches, competes, and stays close to the game every day. This page shows both sides of that:
+            the coach and the player.
           </p>
         </div>
 
@@ -48,13 +47,13 @@ export default function Tennis() {
 
       <section className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="rounded-[2rem] border border-white/10 bg-[#17171d] p-8 md:p-10">
-          <p className="font-sans text-[0.72rem] uppercase tracking-[0.38em] text-sand/80">Toward coaching</p>
+          <p className="font-sans text-[0.72rem] uppercase tracking-[0.38em] text-sand/80">Coaching</p>
           <h2 className="mt-4 font-serif text-4xl text-cream md:text-5xl">
-            The coaching side is warm, demanding, and deeply relational.
+            The coaching side feels personal and steady.
           </h2>
           <p className="mt-5 max-w-xl leading-7 text-cream/70">
-            These images sit with the coaching identity rather than with competition. The tone here is trust,
-            communication, and presence around other players.
+            These images show the side of Sandro that works with people directly and helps players feel more
+            comfortable on court.
           </p>
           <div className="mt-8 grid gap-4">
             {coachingPoints.map((point) => (
@@ -92,13 +91,13 @@ export default function Tennis() {
         </div>
 
         <div className="rounded-[2rem] border border-white/10 bg-white/[0.05] p-8 backdrop-blur-2xl md:p-10">
-          <p className="font-sans text-[0.72rem] uppercase tracking-[0.38em] text-sand/80">Toward the player</p>
+          <p className="font-sans text-[0.72rem] uppercase tracking-[0.38em] text-sand/80">Player</p>
           <h2 className="mt-4 font-serif text-4xl text-cream md:text-5xl">
-            The player side carries the discipline behind everything else.
+            The player side is where the standard comes from.
           </h2>
           <p className="mt-5 leading-7 text-cream/70">
-            Before the photography, before the leadership, and even before the coaching confidence, there is
-            the athlete who has kept showing up across years, countries, and different forms of competition.
+            This is the part of Sandro that keeps training, competing, and learning. It is what gives the
+            coaching side real credibility.
           </p>
 
           <div className="mt-8 grid gap-4">

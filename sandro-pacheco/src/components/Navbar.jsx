@@ -4,7 +4,7 @@ import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 const MotionSpan = motion.span;
 
 const domainOptions = [
-  { id: 'tennis', label: 'Tennis', caption: 'Coach / Player', route: '/tennis' },
+  { id: 'tennis', label: 'Tennis', caption: 'Coach / Player', route: '/' },
   { id: 'photography', label: 'Photography', caption: 'Sports / Storytelling', route: '/photography' },
 ];
 
@@ -13,20 +13,11 @@ const pageLinks = [
   { to: '/contact', label: 'Contact' },
 ];
 
-export default function Navbar({ activeDomain, setActiveDomain }) {
+export default function Navbar({ activeDomain }) {
   const location = useLocation();
   const navigate = useNavigate();
-  const isHome = location.pathname === '/';
   const showDomainToggle =
     location.pathname === '/' || location.pathname === '/tennis' || location.pathname === '/photography';
-
-  const handleDomainChange = (option) => {
-    setActiveDomain(option.id);
-
-    if (!isHome || location.pathname === '/tennis' || location.pathname === '/photography') {
-      navigate(option.route);
-    }
-  };
 
   return (
     <header className="sticky top-0 z-50 px-4 py-4 md:px-8">
@@ -64,7 +55,7 @@ export default function Navbar({ activeDomain, setActiveDomain }) {
                 <button
                   key={option.id}
                   type="button"
-                  onClick={() => handleDomainChange(option)}
+                  onClick={() => navigate(option.route)}
                   className={`relative z-10 min-w-[132px] cursor-pointer rounded-full px-4 py-2 text-left transition-colors duration-300 ${
                     isActive ? 'text-ink' : 'text-cream/80'
                   }`}

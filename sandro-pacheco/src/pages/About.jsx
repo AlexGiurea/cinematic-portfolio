@@ -14,29 +14,29 @@ export default function About() {
       <section className="rounded-[2.25rem] border border-white/10 bg-white/[0.05] px-6 py-12 backdrop-blur-2xl md:px-10 md:py-16 lg:px-14">
         <p className="font-sans text-[0.72rem] uppercase tracking-[0.42em] text-sand/80">About</p>
         <h1 className="mt-4 max-w-4xl font-serif text-5xl leading-[0.94] text-cream md:text-7xl">
-          From Cochabamba to college tennis in Tennessee, with a camera never far away.
+          Sandro grew up in Cochabamba and brought that path with him to college tennis in the U.S.
         </h1>
         <p className="mt-6 max-w-3xl text-lg leading-8 text-cream/72">
-          Sandro&apos;s story is grounded in family support, cross-border development, and years of learning
-          how sport can shape both identity and community.
+          His background is shaped by family support, years in racket sports, and a steady move from Bolivia
+          to bigger tennis opportunities.
         </p>
       </section>
 
       <section className="mt-8 grid gap-5">
         <InfoCard
           label="Origins"
-          title="The early years were built on resourcefulness."
-          text="He grew up in Bolivia competing across racket sports while his family helped carry the practical weight of training and travel. That history still gives his work a grounded, underdog quality."
+          title="He started with a strong sports background at home."
+          text="Sandro grew up in Bolivia competing across different racket sports while his family helped make training and travel possible."
         />
         <InfoCard
           label="Development"
-          title="Multiple sports sharpened the same instincts."
-          text="Racquetball, squash, and tennis all fed the same strengths: timing, adaptation, pressure management, and a strong feel for rhythm in competition."
+          title="Different sports taught the same core habits."
+          text="Racquetball, squash, and tennis all helped shape his timing, discipline, and feel for competition."
         />
         <InfoCard
-          label="Present"
-          title="At LMU, the strands now connect."
-          text="Tennis, photography, leadership, and business studies sit together more naturally now. The site can expand each of those later, but this page anchors the narrative first."
+          label="Today"
+          title="Now those parts come together more naturally."
+          text="Tennis and photography are the clearest parts of his story right now, and both come from staying close to sport every day."
         />
       </section>
     </div>
